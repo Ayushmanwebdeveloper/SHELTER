@@ -1,14 +1,29 @@
-#fd{
-    position: absolute;
-    height: 708px;
+body{
+    margin:auto;
+}
 
-    left: 0%;
+#fd{
+    height: 708px;
+      left: 0%;
     right: 0%;
     top: 0px;
     background-image:url(../../assets/images/start-screen-background.jpg);
+    background-size: cover;
     background: url(noise_lines_transparent@2X.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%)
             /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     , #211F20;
+}
+#about{
+    height: 550px;
+    background: #FFFFFF;
+}
+#head{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0.06em;
+    color: #545454;
 }
 header{
 display: inline-flex;
@@ -23,6 +38,20 @@ top: 15px;
     width: 194px;
     left: 0px;
     top: 0px;
+}
+
+#friends{
+    height: 800px;
+    background: #F6F6F6;
+    text-align: center;
+}
+#headp{
+    font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        color: #4C4C4C;
+        letter-spacing: 1px;
 }
 #ti{
     height: 35px;
@@ -54,6 +83,13 @@ margin-bottom: 0px;
 
         color: #FFFFFF;
 }
+#t1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    color: #545454;
+    padding-top: 75px;
+}
 h1{font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -70,6 +106,20 @@ h1{font-family: 'Georgia';
     border-bottom: 5px solid #F1CDB3;
     padding-left: 0px;
     padding-right: 0px;
+}
+.button {
+    background-color: #F1CDB3;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 15px 37px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
 }
 
 ul {
@@ -91,7 +141,36 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+#cardcontainer{
+    display: inline-flex;
+    justify-content: space-between;
+    width:100%
+}
+#cardimg{
+border-radius: 9px 9px 0px 0px;
+height: 270px;
+width: 270px;
+
+}
+#cardp{
+    font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.06em;
+}
+#card{
+width: 270px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: center;
+margin: auto;
+height: 435px;
+background: #FAFAFA;
+border-radius: 9px;
+}
 li a:hover {
     background-color: #111;
 }
+
