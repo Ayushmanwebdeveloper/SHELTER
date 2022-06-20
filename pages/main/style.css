@@ -3,7 +3,7 @@ body{
 }
 
 #fd{
-    height: 708px;
+
       left: 0%;
     right: 0%;
     top: 0px;
@@ -13,7 +13,7 @@ body{
     , #211F20;
 }
 #about{
-    height: 550px;
+
     background: #FFFFFF;
 }
 #head{
@@ -145,7 +145,7 @@ li a {
     justify-content: space-between;
     width:100%
 }
-#cardimg{
+.cardimg{
 border-radius: 9px 9px 0px 0px;
 height: 270px;
 width: 270px;
@@ -158,7 +158,7 @@ width: 270px;
         font-size: 20px;
         letter-spacing: 0.06em;
 }
-#card{
+.card{
 width: 270px;
 display: flex;
 flex-direction: column;
@@ -222,7 +222,7 @@ justify-content: space-around;
 }
 
 #footer{
-  
+
     padding:5px;
     display: flex;
     justify-content: space-around;
@@ -257,4 +257,114 @@ font-family: 'Georgia';
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+@media (min-width: 1080px) and (max-width: 3180px) {
+    .part1 {
+        width: 50%;
+    }
+
+    .part2 {
+        width: 50%;
+    }
+    #main1{
+        display: inline-flex;
+        width: 100%;
+    }
+    #photo1{
+   max-width: 100%;
+    height: auto;
+    margin-top: 60px;
+    }
+    #head1{
+        margin-top: 160px;
+        margin-left: 25px
+    }
+    #about{
+   display: inline-flex;
+    width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+#fd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+}
+#photo1 {
+max-width: 100%;
+    height: 400px;
+    margin-top: 60px;
+}
+.part1{
+width:95%;
+}
+.part2{
+width: 95%;
+}
+  #head1 {
+      margin-top: 80px;
+      margin-left: 25px
+  }
+  #ha4{
+    font-size: 20px;
+  }
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+  }
+  #togglecard{
+display: none;
+  }
+  #donation{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+#fd {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .part1 {
+        width: 95%;
+    }
+  #photo1 {
+    max-width: 100%;
+    height: 400px;
+    margin-top: 60px;
+}
+ #head1 {
+     margin-top: 80px;
+     margin-left: 25px;
+ }
+    .part2 {
+        width: 95%;
+    }
+        #ha4 {
+            font-size: 20px;
+        }
+      #about {
+                     display: flex;
+                     flex-direction: column-reverse;
+                     justify-content: space-around;
+                     text-align: center;
+                     width: 100%;
+    }
+        #togglecard {
+            display: none;
+        }
+                #donation {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
 }
