@@ -206,7 +206,13 @@ h2{
     color: #545454;
     padding-bottom: 60px;
 }
-
+.slide:hover{
+    background-color: #CDCDCD!important;
+    color: #111!important;
+}
+.mySlides {
+    display: none;
+}
 #help1{
 
     width: 100%;
