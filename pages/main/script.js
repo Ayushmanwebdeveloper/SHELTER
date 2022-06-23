@@ -174,7 +174,9 @@ return pets;
 let count1 = 1;
 let count2 = 2;
 let count3 = 3;
-
+let count1m;
+let count2m;
+let count3m;
 right.addEventListener('click', function () {
 Pets();
 card1.children[1].innerText = res[count1].name;
@@ -190,39 +192,82 @@ if (count1===9) {
     count1=0;
 
 }
-console.log(count1);
+
 if (count2 === 9) {
         count2 = 1;
 }
 if (count3 === 9) {
         count3 = 2;
 }
+    count1m = count1-1;
+    count2m = count2-1;
+    count3m = count3-1;
 })
-
-let count1m = 8;
-let count2m = 7;
-let count3m = 6;
 
 left.addEventListener('click', function () {
     Pets();
+    count1m--
     card1.children[1].innerText = res[count1m].name;
     card1.children[0].src = res[count1m].img;
-    count1m--;
+    count2m--
     card2.children[1].innerText = res[count2m].name;
     card2.children[0].src = res[count2m].img;
-    count2m--;
+    count3m--
     card3.children[1].innerText = res[count3m].name;
     card3.children[0].src = res[count3m].img;
-    count3m--;
-    if (count1m === 2) {
-        count1m = 0;
+
+    console.log(count1m);
+    console.log(count2m);
+    console.log(count3m);
+    if (count1m <=0) {
+        count1m = 7;
 
     }
-    console.log(count1m);
-    if (count2m === 1) {
-        count2m = 1;
+    if (count2m <= 0) {
+        count2m = 8;
     }
-    if (count3m === 0) {
-        count3m = 2;
+    if (count3m <= 0) {
+        count3m = 9;
     }
+})
+
+
+var modal = document.getElementById("Popup");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+let age = document.getElementById("age");
+let para = document.getElementById("parasi");
+let disease = document.getElementById("dise");
+let ino = document.getElementById("ino");
+let popimage=document.getElementById("popimg");
+let popd = document.getElementsByClassName("popdis")
+ card1.addEventListener('click', function (){
+     let x=0;
+     if (count1m !== (count1-1)) {
+        ++x
+    }
+     if (count1==1) {
+         modal.style.display = "block";
+    }
+    popimage.src = res[count1-x-1].img;
+    popd.headp.innerText = res[count1-x-1].description;
+    age.innerText =`Age:${res[count1 - x - 1].age}`;
+     ino.innerText = `Inoculations:${res[count1 - x - 1].inoculations}`;
+     para.innerText = `Parasites:${res[count1 - x - 1].parasites}`;
+     disease.innerText = `Diseases:${res[count1 - x - 1].diseases}`;
+
+    modal.style.display = "block";
 })
