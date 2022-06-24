@@ -235,10 +235,6 @@ left.addEventListener('click', function () {
 var modal = document.getElementById("Popup");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
 span.onclick = function () {
     modal.style.display = "none";
 }
@@ -268,6 +264,40 @@ let popd = document.getElementsByClassName("popdis")
      ino.innerText = `Inoculations:${res[count1 - x - 1].inoculations}`;
      para.innerText = `Parasites:${res[count1 - x - 1].parasites}`;
      disease.innerText = `Diseases:${res[count1 - x - 1].diseases}`;
+
+    modal.style.display = "block";
+})
+card2.addEventListener('click', function () {
+    let x = 0;
+    if (count1m !== (count2 - 1)) {
+        ++x
+    }
+    if (count2 == 2) {
+        modal.style.display = "block";
+    }
+    popimage.src = res[count2 - x ].img;
+    popd.headp.innerText = res[count2 - x ].description;
+    age.innerText = `Age:${res[count2 - x ].age}`;
+    ino.innerText = `Inoculations:${res[count2 - x ].inoculations}`;
+    para.innerText = `Parasites:${res[count2 - x ].parasites}`;
+    disease.innerText = `Diseases:${res[count2 - x].diseases}`;
+
+    modal.style.display = "block";
+})
+card3.addEventListener('click', function () {
+    let x = 0;
+    if (count3m !== (count3 - 1)) {
+        ++x
+    }
+    if (count3 == 3) {
+        modal.style.display = "block";
+    }
+    popimage.src = res[count3 - x - 1].img;
+    popd.headp.innerText = res[count3 - x - 1].description;
+    age.innerText = `Age:${res[count3 - x - 1].age}`;
+    ino.innerText = `Inoculations:${res[count3 - x - 1].inoculations}`;
+    para.innerText = `Parasites:${res[count3 - x - 1].parasites}`;
+    disease.innerText = `Diseases:${res[count3 - x - 1].diseases}`;
 
     modal.style.display = "block";
 })
