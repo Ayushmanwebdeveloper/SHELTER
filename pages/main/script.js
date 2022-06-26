@@ -166,19 +166,34 @@ async function Pets() {
             ]
         }
     ];
-res = petsData;
+    res = petsData.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value);
+        console.log(res);
 const pets = res;
 return pets;
 
 }
+let data = window.performance.getEntriesByType("navigation")[0].type;
+if (data=='reload') {
+    Pets();
+}
 let count1 = 1;
+card1.children[1].innerText = res[count1].name;
+card1.children[0].src = res[count1].img;
+count1++;
 let count2 = 2;
+card2.children[1].innerText = res[count2].name;
+card2.children[0].src = res[count2].img;
+count2++;
 let count3 = 3;
+card3.children[1].innerText = res[count3].name;
+card3.children[0].src = res[count3].img;
+count3++;
+
 let count1m;
 let count2m;
 let count3m;
 right.addEventListener('click', function () {
-Pets();
+    console.log(res);
 card1.children[1].innerText = res[count1].name;
 card1.children[0].src = res[count1].img;
 count1++;
@@ -250,34 +265,45 @@ let disease = document.getElementById("dise");
 let ino = document.getElementById("ino");
 let popimage=document.getElementById("popimg");
 let popd = document.getElementsByClassName("popdis")
+let name1 = document.getElementById("petname");
+console.log(count1);
  card1.addEventListener('click', function (){
      let x=0;
-     if (count1m !== (count1-1)) {
-        ++x
-    }
-     if (count1==1) {
-         modal.style.display = "block";
-    }
+     if (count1 == 2) {
+            x = 0;
+     }
+    //  if (count1m !== (count1 - 1)) {
+    //      ++x
+    //  }
+    //  if (count1 == 1) {
+    //      modal.style.display = "block";
+    //  }
     popimage.src = res[count1-x-1].img;
     popd.headp.innerText = res[count1-x-1].description;
     age.innerText =`Age:${res[count1 - x - 1].age}`;
-     ino.innerText = `Inoculations:${res[count1 - x - 1].inoculations}`;
-     para.innerText = `Parasites:${res[count1 - x - 1].parasites}`;
-     disease.innerText = `Diseases:${res[count1 - x - 1].diseases}`;
+    ino.innerText = `Inoculations:${res[count1 - x - 1].inoculations}`;
+    name1.innerText = `${res[count1 - x - 1].name}`;
+    para.innerText = `Parasites:${res[count1 - x - 1].parasites}`;
+    disease.innerText = `Diseases:${res[count1 - x - 1].diseases}`;
 
     modal.style.display = "block";
 })
+
 card2.addEventListener('click', function () {
     let x = 0;
     if (count1m !== (count2 - 1)) {
         ++x
     }
+
     if (count2 == 2) {
         modal.style.display = "block";
+
     }
+
     popimage.src = res[count2 - x ].img;
     popd.headp.innerText = res[count2 - x ].description;
     age.innerText = `Age:${res[count2 - x ].age}`;
+    name1.innerText = `${res[count2 - x ].name}`;
     ino.innerText = `Inoculations:${res[count2 - x ].inoculations}`;
     para.innerText = `Parasites:${res[count2 - x ].parasites}`;
     disease.innerText = `Diseases:${res[count2 - x].diseases}`;
@@ -285,6 +311,7 @@ card2.addEventListener('click', function () {
     modal.style.display = "block";
 })
 card3.addEventListener('click', function () {
+    console.log(count3);
     let x = 0;
     if (count3m !== (count3 - 1)) {
         ++x
@@ -292,9 +319,13 @@ card3.addEventListener('click', function () {
     if (count3 == 3) {
         modal.style.display = "block";
     }
+    if (count3 == 4) {
+       x=0;
+    }
     popimage.src = res[count3 - x - 1].img;
     popd.headp.innerText = res[count3 - x - 1].description;
     age.innerText = `Age:${res[count3 - x - 1].age}`;
+    name1.innerText = `${res[count3 - x - 1].name}`;
     ino.innerText = `Inoculations:${res[count3 - x - 1].inoculations}`;
     para.innerText = `Parasites:${res[count3 - x - 1].parasites}`;
     disease.innerText = `Diseases:${res[count3 - x - 1].diseases}`;

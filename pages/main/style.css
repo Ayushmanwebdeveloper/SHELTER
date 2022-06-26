@@ -592,7 +592,8 @@ width:95%;
 }
 .part2{
 width: 95%;
-text-align: center;
+text-align: left;
+margin: auto;
 }
   #head1 {
       margin-top: 80px;
@@ -688,7 +689,8 @@ display: none;
  }
     .part2 {
         width: 95%;
-        text-align: center;
+        text-align: left;
+        margin: auto;
     }
         #ha4 {
             font-size: 20px;
