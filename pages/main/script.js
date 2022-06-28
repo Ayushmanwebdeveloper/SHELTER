@@ -172,6 +172,7 @@ const pets = res;
 return pets;
 
 }
+Pets();
 let data = window.performance.getEntriesByType("navigation")[0].type;
 if (data=='reload') {
     Pets();

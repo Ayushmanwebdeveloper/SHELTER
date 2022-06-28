@@ -137,7 +137,7 @@ li a {
     text-decoration: none;
 }
 
-#cardcontainer{
+.cardcontainer{
     display: inline-flex;
     justify-content: space-between;
     width:100%
@@ -167,9 +167,28 @@ background: #FAFAFA;
 border-radius: 9px;
 transition: background 3s;
 }
+
 .card:hover{
     cursor: pointer;
 background-color: goldenrod;
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: center;
+}
+.pagebutton{
+    background: #F1CDB3;
+    width: 52px;
+    height: 52px;
+    margin: 5px;
+    font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.06em;
+border: 2px solid #CDCDCD;
+    border-radius: 100px;
 }
 .navbar {
     width: 100%;
@@ -612,6 +631,15 @@ margin: auto;
   #togglecard1{
 display: none;
   }
+   #togglecard2 {
+       display: none;
+   }
+        #dtogglecard2 {
+            display: none;
+        }
+   #dtogglecard1 {
+       display: none;
+   }
  #puppy {
      display: none;
  }
@@ -705,9 +733,21 @@ display: none;
         #togglecard {
             display: none;
         }
+                 #dtogglecard {
+                     display: none;
+                 }
                 #togglecard1 {
                     display: none;
                 }
+                                 #togglecard2 {
+                                     display: none;
+                                 }
+                           #dtogglecard2 {
+                            display: none;
+                                         }
+                                 #dtogglecard1 {
+                                     display: none;
+                                 }
                 #donation {
                     display: flex;
                     flex-direction: column-reverse;
