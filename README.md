@@ -1,4 +1,4 @@
-# SHELTER PROJECT (EPAM-UpSkillMe-RSSCHOOL)
+# SHELTER PROJECT (EPAM-UpSkillMe-RS-SCHOOL)
 https://ayushmanwebdeveloper.github.io/SHELTER/pages/main/index.html
 
 
